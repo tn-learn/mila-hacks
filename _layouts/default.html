@@ -15,7 +15,14 @@
     </section>
 
     <script src="{{ '/js/jquery-1.11.3.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="/assets/js/gridworld.js"></script>
 
     {% include analytics/google_analytics.html ga_id=site.tracking.google_analytics %}
+
+    <nav class="site-nav">
+      <a href="{{ site.baseurl }}/" class="site-nav-item">Home</a>
+      <a href="{{ site.baseurl }}/grid.html" class="site-nav-item">Grid</a>
+      <!-- Other navigation items -->
+    </nav>
   </body>
 </html>

@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 32px);
+    gap: 1px;
+    margin-bottom: 16px;
+}
+.cell {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+.wall { background-color: #888; }
+.agent { color: blue; }
+.key { font-weight: bold; }
+.door { font-style: italic; }
+.inventory {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.memory {
+    list-style-type: disc;
+    padding-left: 20px;
+}
