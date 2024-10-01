@@ -1,7 +1,50 @@
-<div id="gridWorld">
-    <div id="grid" class="grid"></div>
-    <h3>Agent Inventory:</h3>
-    <div id="inventory" class="inventory"></div>
-    <h3>Agent Memory:</h3>
-    <ul id="memory" class="memory"></ul>
-</div>
+<section class="hero">
+    <div class="wrapper">
+        <div class="hero-overlay">
+            <!-- Title cell -->
+            <div class="cell title-cell">
+                <h1 rel="title">{{ site.event.name }}</h1>
+            </div>
+
+            <div class="cell location-cell">
+                <h3 rel="location" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                    February 21-22, 2025 • In-person event • Aspiring to be part of   
+                    <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-black.svg" alt="MLH Logo" class="mlh-logo" style="height: 1em; width: auto; vertical-align: middle; display: inline-block;">
+                </h3>
+            </div>
+
+            <!-- Buttons cell -->
+            <div class="cell buttons-cell">
+                <div class="buttons">
+                    {% for link in site.event.hero.links %}
+                        {% if link.href %}
+                            <a href="{{ link.href }}">{{ link.text }}</a>
+                        {% elsif link.my_mlh %}
+                            <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&redirect_uri={{ link.my_mlh.redirect_uri }}&response_type=token">{{ link.text }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Gridworld Container with Grid and Sidebar -->
+        <div class="gridworld-container">
+            <!-- GridWorld Div -->
+            <div id="gridWorld">
+                <div id="grid" class="grid">
+                    <!-- Grid cells will be dynamically generated here -->
+                </div>
+            </div>
+
+            <!-- Sidebar Div -->
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <h3>Inventory</h3>
+                    <div id="inventory" class="inventory"></div>
+                    <h3>Thoughts</h3>
+                    <ul id="memory" class="memory"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

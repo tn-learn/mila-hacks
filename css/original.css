@@ -50,7 +50,6 @@ section {
 
 .hero {
   background-color: #323232;
-  min-height: 110vh;
 }
 
 .hero img {
@@ -64,13 +63,9 @@ section {
   top: -14px;
 }
 
-.hero .wrapper {
-  padding-top: 30vh;
-}
-
 .hero .wrapper h1 {
-  background: #fff;
-  background: rgba(255, 255, 255, .3);
+  /* background: #fff;
+  background: rgba(255, 255, 255, .3); */
   display: inline-block;
   font-size: 60px;
   font-weight: 800;
