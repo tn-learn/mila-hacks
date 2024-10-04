@@ -137,10 +137,15 @@
 .memory {
     list-style-type: none;
     padding-left: 0;
+    max-height: 700px; /* Adjust this value as needed */
+    overflow-y: auto;
 }
 
 .memory li {
     margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
 }
 
 /* Key and door styling */
@@ -308,7 +313,37 @@ body, html {
 }
 
 .sidebar-content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+.memory {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 50vh; /* Adjust this value to control the height of the thoughts list */
+}
+
+.sidebar-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sidebar-section {
+    width: 48%; /* Adjust as needed */
+}
+
+#mini-map {
+    width: 100%;
+    height: 150px; /* Adjust as needed */
+    border: 1px solid #ccc;
+}
+
+.inventory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .sidebar h3 {
@@ -399,4 +434,79 @@ body, html {
 
 .buttons-cell .buttons a.apply {
     background-color: #ff4500;
+}
+
+/* Add these new styles for the keys */
+.key-icon {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-icon::before {
+    content: '🔑';
+    font-size: 2em;
+    filter: grayscale(100%) brightness(0);
+}
+
+.key-red::before {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(90%) saturate(7466%) hue-rotate(0deg) brightness(100%) contrast(114%) !important;
+}
+
+.key-blue::before {
+    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(7154%) hue-rotate(248deg) brightness(97%) contrast(143%) !important;
+}
+
+.key-green::before {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(88%) saturate(1485%) hue-rotate(95deg) brightness(96%) contrast(106%) !important;
+}
+
+.key-yellow::before {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(61%) saturate(895%) hue-rotate(359deg) brightness(103%) contrast(104%) !important;
+}
+
+/* Update the inventory item style */
+.inventory-item {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Fog of War */
+.fog-of-war {
+    background-color: #000;
+}
+
+/* Mini-Map Styles */
+#mini-map {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size-x), 1fr);
+    grid-template-rows: repeat(var(--grid-size-y), 1fr);
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.mini-map-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.mini-map-explored {
+    background-color: lightgray;
+}
+
+.mini-map-wall {
+    background-color: darkgray;
+}
+
+.mini-map-agent {
+    background-color: blue;
+}
+
+.mini-map-unexplored {
+    background-color: black;
 }

@@ -50,9 +50,8 @@ event:
 
   about:
     description: >
-      Example Hacks is a hackathon hosted at The University of Example.
-      This is your opportunity to describe your event, what to expect, where it is & anything unique to your event.
-      Keep it straightforward, don't make it too long.
+      Hack Agents at Mila is a hackathon hosted at Mila in Montreal, Quebec.
+      We'll be hacking at the world-famous institute, building AI agents and related technologies.
 
   # Info Sections
   info:
