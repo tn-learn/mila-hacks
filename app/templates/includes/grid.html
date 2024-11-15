@@ -3,12 +3,12 @@
         <div class="hero-overlay">
             <!-- Title cell -->
             <div class="cell title-cell">
-                <h1 rel="title">{{ site.event.name }}</h1>
+                <h1 rel="title">Hack Agents at Mila</h1>
             </div>
 
             <div class="cell location-cell">
-                <h3 rel="location" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                    February 21-22, 2025 • In-person event • Aspiring to be part of   
+                <h3 rel="location" style="white-space: normal; max-width: 95%; margin-top: -22px;">
+                    15-16 March 2025 • Montreal, Canada • an official MLH event   
                     <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-black.svg" alt="MLH Logo" class="mlh-logo" style="height: 1em; width: auto; vertical-align: middle; display: inline-block;">
                 </h3>
             </div>
@@ -16,13 +16,7 @@
             <!-- Buttons cell -->
             <div class="cell buttons-cell">
                 <div class="buttons">
-                    {% for link in site.event.hero.links %}
-                        {% if link.href %}
-                            <a href="{{ link.href }}">{{ link.text }}</a>
-                        {% elsif link.my_mlh %}
-                            <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&redirect_uri={{ link.my_mlh.redirect_uri }}&response_type=token">{{ link.text }}</a>
-                        {% endif %}
-                    {% endfor %}
+                    <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ config.MLH_CLIENT_ID }}&redirect_uri={{ config.MLH_REDIRECT_URI }}&response_type=token">Apply Now</a>
                 </div>
             </div>
         </div>

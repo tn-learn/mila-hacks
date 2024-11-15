@@ -488,8 +488,8 @@ const GridWorld = {
 
         const door = this.doors.find((d) => d.x === x && d.y === y);
         if (door) {
-            const doorImgSrc = door.isOpen ? "images/unlocked.png" : "images/locked.png";
-            const lockImgSrc = "images/lock.png";
+            const doorImgSrc = door.isOpen ? "static/images/unlocked.png" : "static/images/locked.png";
+            const lockImgSrc = "static/images/lock.png";
 
             return `
                 <div class="door-container">
@@ -559,7 +559,7 @@ const GridWorld = {
                         const agentIcon = document.createElement("div");
                         agentIcon.className = "agent-cell";
                         const agentImg = document.createElement("img");
-                        agentImg.src = "images/hacker.png";
+                        agentImg.src = "static/images/hacker.png";
                         agentImg.alt = "Agent";
                         agentIcon.appendChild(agentImg);
                         cell.appendChild(agentIcon);
