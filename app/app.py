@@ -15,4 +15,4 @@ def success():
     return render_template('success.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=False) 
