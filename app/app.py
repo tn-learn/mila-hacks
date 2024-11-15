@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_assets import Environment, Bundle
-from config import Config
+from .config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
